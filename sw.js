@@ -10,7 +10,7 @@ self.onnotificationclick = function(event) {
   }).then(function(clientList) {
     for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' && 'focus' in client){
+      if ('focus' in client){
         var msg_chan = new MessageChannel();
         client.postMessage({clicked:true}, [msg_chan.port2]);
         return client.focus();

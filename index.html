@@ -15,6 +15,7 @@
                 navigator.serviceWorker.register('/sw.js')
                 var notifier = null;
                 Notification.requestPermission(function(result) {
+                    document.getElementById('info').innerHTML = "Permission : '" + result + "'.";
     	            if(result === 'granted'){
                                 navigator.serviceWorker.ready.then(function(registration){
                                         notifier = registration
@@ -54,6 +55,7 @@
 		 }
 		</script>
 	<button onclick="pauzetimer()">Start timer</button>
+	<div id="info"></div>
 	</body>
 
 </html>

@@ -12,7 +12,7 @@
 		<script>
                 'use strict';
                 
-                navigator.serviceWorker.register('sw.js')
+                navigator.serviceWorker.register('/sw.js')
                 var notifier = null;
                 Notification.requestPermission(function(result) {
     	            if(result === 'granted'){

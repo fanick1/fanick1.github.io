@@ -1,5 +1,5 @@
 
-self.addEventListener('notificationclick', function(event) {
+self.onnotificationclick = function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 

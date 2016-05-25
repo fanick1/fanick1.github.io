@@ -41,6 +41,17 @@
 				};*/
 			}, (timeout * 60 * 1000) || 100);
 		 };
+		 
+		 navigator.serviceWorker.onmessage = function(messageEvent){
+		     console.log("Received message: ", messageEvent.data);
+		     if(messageEvent.data.clicked){
+			window.focus();
+			setTimeout(function(){
+				var _timeout = prompt('Timer restarted. Specify new timeout (in minutes).');
+				pauzetimer(_timeout);
+				},0);
+		     }
+		 }
 		</script>
 	<button onclick="pauzetimer()">Start timer</button>
 	</body>

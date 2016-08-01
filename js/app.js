@@ -1,6 +1,8 @@
 /* jshint esnext: true */
 /* jshint curly: true */
 /* jshint asi:true */
+/* jslint node:true */
+/* jslint browser:true */
 
 (function(){
   "use strict";
@@ -42,9 +44,14 @@ navigator.serviceWorker.onmessage = function(messageEvent){
   if(messageEvent.data.clicked){
     window.focus();
     setTimeout(function(){
-      var _timeout = prompt('Timer restarted. Specify new timeout (in minutes).');
+      var _timeout = prompt('Timer restarted.  Specify new timeout (in minutes).');
       pauzetimer(_timeout);
     },0);
   }
 }
+
+
+document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+':35729/livereload.js?snipver=1"> </' + 'script>');
+
 })()

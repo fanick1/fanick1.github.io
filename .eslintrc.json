@@ -1,0 +1,22 @@
+{
+    "extends": "standard",
+    "installedESLint": true,
+
+    "plugins": [
+        "react",
+        "standard",
+        "promise"
+    ],
+    "settings": {
+        "react": {
+          "pragma": "React",
+          "version": "15.0"
+        }
+      },
+    "rules": {
+      "space-before-function-paren": "error",
+      "space-before-blocks": "error",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error"
+  }
+}
